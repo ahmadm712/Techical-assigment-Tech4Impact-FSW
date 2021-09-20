@@ -1,4 +1,5 @@
 START
+
     NUMBER nilai_awal, nilai_akhir
     INPUT nilai_awal (0-100)
     IF nilai_awal < 68 THEN
@@ -8,6 +9,8 @@ START
     ELSE IF nilai > 70 && nilai mod 5 == 4 THEN
         DISPLAY nilai_akhir = nilai_awal+1
     ELSE
-        DISPLAY nilai
-         <br>
+        DISPLAY nilai_awal
+        
+     <br>   
+     
 END

@@ -1,4 +1,5 @@
 START
+
     INPUT kata as STRING
     a = 0
     x = leghtofstring (kata) - 1
@@ -10,4 +11,5 @@ START
         DISPLAY TRUE
     ELSE
         DISPLAY FALSE
+        <br>
 END

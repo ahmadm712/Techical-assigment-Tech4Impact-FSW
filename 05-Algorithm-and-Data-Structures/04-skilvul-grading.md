@@ -9,4 +9,5 @@ START
         DISPLAY nilai_akhir = nilai_awal+1
     ELSE
         DISPLAY nilai
+         <br>
 END

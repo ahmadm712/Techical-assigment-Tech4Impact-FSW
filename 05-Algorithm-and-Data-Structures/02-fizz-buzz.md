@@ -1,4 +1,5 @@
 START
+<br>
         STORE N with any number
         SET i = 1
         WHILE i less than or equal to N
@@ -13,4 +14,5 @@ START
            END IF
            ADD i by 1
         END WHILE
+   <br>
 FINISH

@@ -1,9 +1,35 @@
-# Questions
+## What is the difference between git reset and git revert. When would you use one over the other?
+   #### Ketika menggunakan git reset maka akan membatalkan semua perubahan yang ada namun commit terakhir setelah commit yang dituju akan dihapus, seperti melakukan reset keadaan kembali ke semula. Sedangkan ketika menggunakan git revert perubahan yang ada akan dikembalikan atau dibatalkan dengan membuat sebuah commit baru dari commit yang dituju/di-revert (seperti membuat duplikat dari commit tersebut) dan commit terakhirnya tidak akan dihapus, jadi masih bisa kembali ke commit-commit sebelumnya. Sederhananya revert tidak akan memodifikasi riwayat commit yang ada, namun reset dapat mengubah riwayat commit.
+   </br>
+   
+   #### git reset digunakan ketika kita sudah membuat suatu perubahan dan sudah melakukan commit tapi masih tersimpan di local repo yang kita miliki, belum dipush ke public repository nya, kemudian kita memutuskan bahwa perubahan tersebut tidak cocok/ tidak ingin ditambahkan, maka kita dapat menggunakan git reset ini untuk mengembalikan riwayat commitnya seperti semula seolah-olah kita belum pernah membuat perubahan. git reset juga biasanya digunakan untuk membuang perubahan yang belum dicommit atau menghapus file dari staging area.
+   </br>
+        
+   #### git revert digunakan ketika kita sudah membuat perubahan dan sudah melakukan commit serta mempublish perubahan tersebut pada public repository, namun setelah dilihat-lihat lagi kita memutuskan perubahan tersebut kurang cocok dan ingin dikembalikan seperti sebelumnya serta menyimpan riwayat pengembalian tersebut agar dapat diketahui oleh tim yang lain atau agar di masa depan dapat diketahui bahwa fitur yang sebelumnya sudah pernah dibuat itu kurang cocok maka kita dapat menggunakan git revert.
+   </br>
 
-Answer the following questions
+   ## What is the difference between git merge and git rebase. When would you use one over the other?
+ #### git merge menggabungkan dua history commit dari branch yang ingin dimerge ke branch tujuannya, dengan git merge history commit antara dua branch yang digabungkan akan tetap seperti apa adanya.
+ </br>
+ 
+#### Sedangkan git rebase akan memasukkan history commit dari branch yang direbase ke dalam branch tujuannya sehingga akan menjadi satu line commit (seolah-olah dari awal commit yang digabungkan tersebut memang sudah menjadi bagian dari branch tujuannya), hampir mirip seperti fast-forward merge namun rebase menulis ulang semua history commit dari kedua branch menjadi satu history commit baru.
+</br>
 
-    What is the difference between git reset and git revert. When would you use one over the other?
-    What is the difference between git merge and git rebase. When would you use one over the other?
-    What is the difference between git stash pop and git stash apply. When would you use one over the other?
-    What kinds of things can you do in interactive mode when rebasing?
+#### merge sebaiknya digunakan ketika kita ingin memasukkan pembaruan atau menambahkan perubahan dari branch fitur ke branch utamanya dan ketika kita ingin history commit yang ada tetap seperti seharusnya agar dapat tetap ditrack kapan perubahan-perubahan baru dibuat dan ditambahkan ke branch utama. Dan merge akan lebih cocok digunakan untuk project yang dikerjakan dalam tim yang cukup besar karena jika menggunakan rebase maka bisa berdampak pada orang lain juga
+</br>
+
+#### rebase sebaiknya digunakan ketika kita ingin mengambil perubahan dari branch utama ke branch fiturnya, dengan kata lain ketika kita ingin branch fitur up to date dengan branch utamanya atau jika kita lebih menginginkan history commit yang sederhana dan bersih agar lebih readable. Dan rebase ini lebih cocok digunakan pada project yang dikerjakan secara individual atau pada tim dengan skala kecil.
+</br>
+
+#### Pemilihan antara merge dan rebase ini sebaiknya disesuaikan lagi dengan kebutuhan masing-masing, mana yang lebih baik diterapkan untuk project yang sedang dikerjakan.
+
+   ## What is the difference between git stash pop and git stash apply. When would you use one over the other?
+ #### git stash pop menerapkan kembali perubahan yang sebelumnya disimpan ke working filenya dan menghapus perubahan yang disimpan (distash) tersebut sedangkan git stash apply juga akan menerapkan perubahan yang sudah disimpan ke working filenya namun tidak menghapus perubahan tersebut dari stash.
+ </br>
+ 
+### git stash apply dapat digunakan jika kita ingin mengapply perubahan tersebut ke berbagai cabang sehingga tidak perlu menuliskannya berulang ulang dan git stash pop dapat digunakan jika hanya ingin menerapkannya ke satu file itu saja.
+
+  ##  What kinds of things can you do in interactive mode when rebasing?
+## Dengan interactive rebase kita dapat menyesuaikan bagaimana setiap commit akan diterapkan kembali ketika melakukan rebase. Seperti misalnya memisahkan commit, menggabungkan beberapa commit yang mirip menjadi satu, menyusun ulang atau mengganti urutan commit, atau bahkan menghapus suatu commit.
+
 

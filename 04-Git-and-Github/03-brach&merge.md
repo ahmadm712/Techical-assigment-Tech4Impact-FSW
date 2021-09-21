@@ -1,10 +1,10 @@
-What does git clean do?
+# What does git clean do?
 git clean menghapus untracked file dan direktori dari working tree atau dengan kata lain menghapus file dan direktori yang baru dibuat dalam working directory dan belum dimasukkan ke version control. git clean sama dengan command rm untuk menghapus file secara permanen dan tidak bisa diundo (dibatalkan/dikembalikan).
 
-
+MD12
 
 What do the -d and -f flags for git clean do?
--d merupakan option untuk menghapus untracked direktori dan -f merupakan required option untuk menjalankan penghapusan (singkatan dari force), jika tidak ditambahkan -f maka git tidak akan melakukan penghapusan kecuali konfigurasi option clean.requireForce diset menjadi false. Kombinasi -d dan -f akan memberitahu kepada gi clean untuk menghapus untracked directory.
+`-d` merupakan option untuk menghapus untracked direktori dan -f merupakan required option untuk menjalankan penghapusan (singkatan dari force), jika tidak ditambahkan -f maka git tidak akan melakukan penghapusan kecuali konfigurasi option clean.requireForce diset menjadi false. Kombinasi -d dan -f akan memberitahu kepada gi clean untuk menghapus untracked directory.
 
 What git command creates a branch?
 git branch branch_name
@@ -16,7 +16,7 @@ Berikut ini merupakan contoh dari Fast-forward merge dan Recursive merge
 ![Image](https://user-images.githubusercontent.com/61933958/134110878-a05a835c-f5f9-4849-8c92-79df11fd4be8.png)
 ![Image](https://user-images.githubusercontent.com/61933958/134110882-838b7e25-c344-44ee-8f7e-e3fa5ce24f96.png)
 
-
+MD012
 
 What git command changes to another branch?
 git checkout branch_name

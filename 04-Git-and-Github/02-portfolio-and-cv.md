@@ -72,11 +72,12 @@
     git push -u origin main
 
     Github repository
+   [Repo](https://github.com/ahmadm712/Techical-Assigment-Github.git)
     
     
     
     
-   ![image](https://user-images.githubusercontent.com/66357389/134121005-dfb0c49d-91a0-4e8d-a4aa-c2b1861eacc5.PNG)
+   ![Git Log](https://user-images.githubusercontent.com/66357389/134121005-dfb0c49d-91a0-4e8d-a4aa-c2b1861eacc5.PNG)
 
     
     

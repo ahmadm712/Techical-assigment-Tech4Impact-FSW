@@ -13,8 +13,8 @@ What is the difference between a fast-forward and recursive merge?
 Fast-forward merge merupakan merging yang dilakukan ketika kedua branch masih berada pada satu jalur commit yang sama. Sedangkan recursive merge merupakan merging yang dilakukan ketika dua branch yang dimerge tidak lagi berada dalam satu jalur atau dengan kata lain kedua branch tersebut sudah memiliki commitnya masing-masing. Dengan recursive merge maka proses merging yang dilakukan akan membuat sebuah commit baru untuk menyatukan kedua branch sedangkan dengan fast-forward merge maka head nya hanya akan berpindah ke commit terbaru dari branch yang dimerge (tidak membuat commit baru). 
 Berikut ini merupakan contoh dari Fast-forward merge dan Recursive merge
 
-https://user-images.githubusercontent.com/61933958/134110878-a05a835c-f5f9-4849-8c92-79df11fd4be8.png
-https://user-images.githubusercontent.com/61933958/134110882-838b7e25-c344-44ee-8f7e-e3fa5ce24f96.png
+![Image](https://user-images.githubusercontent.com/61933958/134110878-a05a835c-f5f9-4849-8c92-79df11fd4be8.png)
+![Image](https://user-images.githubusercontent.com/61933958/134110882-838b7e25-c344-44ee-8f7e-e3fa5ce24f96.png)
 
 
 

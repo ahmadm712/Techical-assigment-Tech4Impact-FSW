@@ -21,8 +21,8 @@
 
  ////Gaji
 let gajiPokok = 5000000
-let gajiBonus = 5000000*0.1
-let gajiLembur = 5000000*0.05
+let gajiBonus = gajiPokok*0.1
+let gajiLembur = gajiPokok*0.05
 
 
 let pemasukan = gajiPokok + gajiBonus + gajiLembur;

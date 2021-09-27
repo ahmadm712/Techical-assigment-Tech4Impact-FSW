@@ -59,11 +59,8 @@ taxCalc(20000000)
 ///   (weight/(height^2)) * 10000
 
 /// EDIT HERE
-function checkBMI(height,weight) {
+function checkBMI(weight, height) { 
     let BMI = 0;
-    if ((typeof weight !== "number") || (typeof height !== "number")){
-        return "Your input is not a number";
-    }
     BMI = (weight / Math.pow(height,2)) * 10000
     if (BMI < 18.5){
         result = "under weight";
@@ -77,10 +74,13 @@ function checkBMI(height,weight) {
         result = "extremely obese";
     }
     return result;
- }
+}
 
- console.log(checkBMI(80,170));
- console.log(checkBMI(80,160));
+input1 = checkBMI(80,170);
+console.log(input1);
+
+input2 = checkBMI(80,160);
+console.log(input2);
 
 /// Soal - 03
 /// Buatlah sebuah fungsi yang akan merubah huruf pertama disetiap kata menjadi huruf besar
@@ -92,7 +92,22 @@ function checkBMI(height,weight) {
 /// - (String) kalimat yang sudah kita ubah huruf pertamanya menjadi huruf besar
 
 /// EDIT HERE
-// function convToUpperCase(....) { .... }
+function convToUpperCase(sentence) { 
+    let result = ""
+    sentence = sentence.toLowerCase();
+    sentence = sentence.split(" ");
+    for(let word = 0; word < sentence.length; word++){
+        sentence[word] = sentence[word].charAt(0).toUpperCase() + sentence[word].slice(1);
+    }
+    result = sentence.join(" ");
+    return result;
+}
+ 
+input1 = convToUpperCase("hello bandung");
+console.log(input1);
+
+input2 = convToUpperCase("helloworldwide");
+console.log(input2);
 
 
 /// Soal - 04
@@ -110,4 +125,17 @@ function checkBMI(height,weight) {
 /// (String) huruf yang pertama kali tidak ada kembarannya
 
 /// EDIT HERE
-// function firstNonRepeatedChar(....) { .... }
+function firstNonRepeatedChar(word) {
+    for(let i = 0; i< word.length; i++){
+        if(word.indexOf(word[i]) === word.lastIndexOf(word[i])){
+            return word[i];
+        }
+    }
+    return ""
+}
+
+input1 = firstNonRepeatedChar("alloha");
+console.log(input1);
+
+input2 = firstNonRepeatedChar("wooohoowh");
+console.log(input2);

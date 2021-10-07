@@ -152,7 +152,21 @@ const items = [
 
 const calculateIncome = (items) => {
   /// EDIT DOWN HERE
-  
+  return items.reduce((acc, curr) =>{
+        const btcSum = curr.btc.sell - curr.btc.buy;
+        const dogeSum = curr.doge.sell - curr.doge.buy;
+        const ethSum = curr.eth.sell - curr.eth.buy;
+
+        return{
+          btc: acc.btc + btcSum,
+          doge: acc.doge + dogeSum,
+          eth: acc.eth + ethSum,
+        };
+  }, {
+    btc: 0,
+    doge: 0,
+    eth: 0
+});
 }
 
 console.log(calculateIncome(items))

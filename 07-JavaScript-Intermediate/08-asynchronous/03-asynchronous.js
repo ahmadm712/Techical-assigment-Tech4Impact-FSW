@@ -18,8 +18,17 @@
 //         gunakan try catch untuk error handling
 //         berikut merupakan endpoint yang dapat kalian gunakan untuk mendapatkan data dari GitHub API
 
-
-const getGitHubUser = (  ) => {  }
+const getGitHubUser = async (username) => {
+  try {
+    const response = await fetch(`https://api.github.com/users/${username}`, {
+      method: "GET",
+    });
+    const json = await response.json();
+    return json;
+  } catch (error) {
+    console.log(error);
+  }
+};
 const printGitHubUser = async () => {
   const mojombo = await getGitHubUser("mojombo");
   const orange = await getGitHubUser("");
@@ -28,6 +37,6 @@ const printGitHubUser = async () => {
   console.log(mojombo);
   console.log(orange);
   console.log(rudiTabuti);
-}
+};
 
 printGitHubUser();

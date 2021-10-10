@@ -12,14 +12,24 @@
 //         reject dapat kita gunakan untuk mengembalikan hasil yang salah
 //         Error dapat kita gunakan untuk mengembalikan nilai berupa reject
 
-const isR18Plus = (  ) => { }
-const printR18Plus = async () => {
-  const underAge = await isR18Plus(10);
-  const properAge = await isR18Plus(19);
+const isR18Plus = (age) => {
+  return new Promise((resolve, reject) => {
+    age > 18
+      ? resolve("Anda sudah dewasa")
+      : reject("Anda masih dibawah umur");
+  });
+};
 
-  console.log(underage);
-  console.log(properAge);
-}
+const printR18Plus = async () => {
+  try {
+    const underAge = await isR18Plus(10);
+    const properAge = await isR18Plus(20);
+
+    console.log(underAge);
+    console.log(properAge);
+  } catch (error) {
+    console.log(error);
+  }
+};
 
 printR18Plus();
-

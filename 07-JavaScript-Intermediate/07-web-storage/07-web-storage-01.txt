@@ -1,0 +1,25 @@
+
+    Apa itu localStorage?
+    Apa itu cookies?
+    Apa perbedaan antara localStorage dan sessionStorage?
+
+
+
+1) Apa itu localStorage ?
+Local storage merupakan fungsi di javascript yang cara kerjanya sama seperti cookie ( data disimpan dalam browser )  tapi memiliki beberapa kelebihan kelebihan. 
+Local storage dapat menyimpan data lebih aman dan lebih besar dibandingkan dengan cookie. Local storage juga dapat menyimpan data lebih dari 5 MB tanpa harus membebani performa browser. 
+Banyak hal yang bisa dilakukan saat membangun aplikasi web dengan menggunakan fungsi ini dan dapat mempermudah anda dalam membuat atau membangun sebuah website yang lebih responsif di sisi client.
+Maksimum data yang dapat disimpan dalam Local Storage adalah 5-10 MB tanpa harus membebani performa browser.
+
+
+2) Apa itu Cookies?
+adalah data kecil yang dikirim dari situs web dan disimpan di komputer ketika menjelajahi web browser. 
+Maksimum data yang dapat disimpan dalam cookies adalah 4096 bytes (4 KB). Cookies biasanya digunakan untuk menyimpan 
+informasi tentang pengguna yang mengunjungi aplikasi atau situs web, seperti dalam menyimpan halaman yang telah dikunjungi 
+di situs web atau informasi login pengguna (access token untuk username dan password)
+
+3) Apa perbedaan antara localStorage dan sessionStorage
+LocalStorage seperti's disebut's penyimpanan lokal untuk browser anda, hal ini dapat menghemat sampai 10MB, SessionStorage tidak sama, tetapi sebagai it's nama berkata, it's sesi berbasis dan akan dihapus setelah anda menutup browser anda, juga dapat menghemat kurang dari LocalStorage, seperti up untuk 5MB, tapi Cookies sangat kecil menyimpan data di browser anda, sehingga dapat menghemat sampai 4KB dan dapat diakses melalui server atau browser 
+
+Gambar Perbandingan :
+https://i.stack.imgur.com/cI5kT.jpg

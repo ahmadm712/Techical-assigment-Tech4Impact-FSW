@@ -37,7 +37,16 @@
             <span id="username"></span>
             <span
               id="badge-user"
-              class="top-0 position-absolute start-100 translate-middle badge rounded-pill bg-danger d-none"
+              class="
+                top-0
+                position-absolute
+                start-100
+                translate-middle
+                badge
+                rounded-pill
+                bg-danger
+                d-none
+              "
             >
               10
               <span class="visually-hidden">unread messages</span>
@@ -54,6 +63,7 @@
     <!-- Optional JavaScript; choose one of the two! -->
     <script type="module">
       import githubUsers from "./07-web-storage-dummy-data.js";
+      import { logInHandler, drawUserCard } from "./helpers.js";
 
       const elFormUsername = document.querySelector("#form-username");
       const elDivUsername = document.querySelector("#div-username");
@@ -61,61 +71,63 @@
       const elListUser = document.querySelector("#list-user");
       const elBadgeUser = document.querySelector("#badge-user");
 
-      // WEB STORAGE
       let username = sessionStorage.getItem("username");
-      let profile = localStorage.getItem(username ? username : "");
+      let profil = localStorage.getItem(username);
 
-      githubUsers.forEach((user) => {
-        const elCol = document.createElement("div");
-        elCol.classList.add("col-xs-12", "col-sm-6", "col-md-4", "col-lg-3");
+      drawUserCard(elListUser, githubUsers, username, profil);
 
-        const elCard = document.createElement("div");
-        elCard.classList.add("card");
-
-        const elCardImg = document.createElement("div");
-        elCard.classList.add("card-img-top");
-        elCard.setAttribute("src", user.avatar_url);
-
-        const elCardBody = document.createElement("div");
-        elCardBody.classList.add("card-body");
-
-        const elCardTitle = document.createElement("div");
-        elCardTitle.classList.add("card-title");
-        elCardTitle.innerHTML = user.login;
-
-        const elCardButton = document.createElement("button");
-        elCardButton.classList.add("btn", "btn-primary", "w-100");
-        elCardButton.setAttribute("type", "button");
-        elCardButton.innerHTML = "Follow";
-
-        elCardBody.appendChild(elCardTitle);
-        elCardBody.appendChild(elCardButton);
-        elCard.appendChild(elCardBody);
-        elCard.appendChild(elCardImg);
-        elCol.appendChild(elCard);
-
-        elListUser.appendChild(elCol);
-      });
-
-      // interval function
-      function loggedInHeader(uname) {
-        elDivUsername.classList.remove("d-none");
-        elFormUsername.classList.add("d-none")
-        elUsername.innerHTML = uname;
+      if (username) {
+        logInHandler(username, elDivUsername, elFormUsername, elUsername);
       }
 
-      if(username){
-        loggedInHeader(username);
+      let elFollowButtons = document.querySelectorAll(".follow-button");
+      for (let i = 0; i < elFollowButtons.length; i++) {
+        const followButton = elFollowButtons[i];
+        followButton.addEventListener("click", function () {
+          const userId = this.getAttribute("data-id");
+          const following = JSON.parse(profil) || [];
+          const userTarget = following.find((u) => u.id === Number(userId));
+          const userDataDummy = githubUsers.find(
+            (f) => f.id === Number(userId)
+          );
+          if (!userTarget) {
+            const dataToPush = [userDataDummy, ...following];
+            localStorage.setItem(username, JSON.stringify(dataToPush));
+            profil = JSON.stringify(dataToPush);
+            this.classList.add("btn", "btn-success", "w-100");
+            this.setAttribute("type", "button");
+            this.innerHTML = "Unfollow";
+          } else {
+            const withoutUser = following.filter(
+              (f) => f.id !== Number(userId)
+            );
+            const dataToPush = withoutUser;
+            localStorage.setItem(username, JSON.stringify(dataToPush));
+            profil = JSON.stringify(dataToPush);
+            this.classList.remove("btn-success");
+            this.classList.add("btn", "btn-primary", "w-100");
+            this.setAttribute("type", "button");
+            this.innerHTML = "Follow";
+          }
+        });
       }
 
-      elFormUsername.addEventListener("submit", function(event){
+      elFormUsername.addEventListener("submit", function (event) {
         event.preventDefault();
-        const usernameFromInput = event.target['username'].value;
-        if (usernameFromInput) {
-          sessionStorage.setItem("username", usernameFromInput);
-          loggedInHeader(usernameFromInput)
+        const usernameInput = event.target["username"].value;
+        if (usernameInput !== "") {
+          sessionStorage.setItem("username", usernameInput);
+          username = usernameInput;
+          logInHandler(
+            usernameInput,
+            elDivUsername,
+            elFormUsername,
+            elUsername
+          );
+
+          drawUserCard(elListUser, githubUsers, username, profil);
         }
-      })
+      });
     </script>
 
     <script
@@ -123,6 +135,5 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
-
   </body>
 </html>

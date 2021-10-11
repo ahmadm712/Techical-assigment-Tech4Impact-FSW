@@ -20,7 +20,6 @@
 //     ambil data dari form "username" serta jangan lupa untuk menggunakan preventDefault untuk mencegah agar jendela browser tidak terjadi refresh
 //     setelah kita mengambil data "username", kita akan mengambil GitHub user menggunakan GitHub API
 
-
 const elFormUsername = document.querySelector("#form-username");
 const elCard = document.querySelector(".card");
 const elCardImg = document.querySelector(".card-img-top");
@@ -28,42 +27,33 @@ const elCardBtn = document.querySelector("#card-btn");
 const elCardTitle = document.querySelector("#card-title");
 
 const getGitHubUser = async (username) => {
-    try {
-        const users = await fetch(`https://api.github.com/users/${username}`,
-        {method: 'GET'});
-        const json = await users.json()
-        const data = await json;
-        return data;
-
-    } catch (error) {
-        console.log(error);
+  try {
+    if (!username) {
+      return null;
     }
-}
-
-elFormUsername.onsubmit = async (e) => {
-    e.preventDefault();
-    let input = elFormUsername.firstElementChild.value
-    let data = await getGitHubUser(input)
-
-    if (data.login) {
-
-        elCardImg.classList.remove("d-none")
-        elCard.classList.remove("d-none")
-        elCardBtn.classList.remove("d-none")
-        elCardTitle.innerText = data.login
-        elCardImg.src = data.avatar_url
-        elCardBtn.href = data.html_url
-
-        elFormUsername.firstElementChild.value = ""
-        return elCard
+    const data = await fetch("https://api.github.com/users/" + username);
+    let res = await data.json();
+    if (res?.login) {
+      return res;
     }
+    return { login: "Not Found" };
+  } catch (error) {
+    throw error;
+  }
+};
 
-    else {
+elFormUsername.onsubmit = async (event) => {
+  event.preventDefault();
 
-        elCardImg.classList.add("d-none")
-        elCardBtn.classList.add("d-none")
-        elCardTitle.innerText = `Not Found`;
-
-        return elCard
-    }
+  const data = await getGitHubUser(elFormUsername.firstElementChild.value);
+  elCardTitle.innerText = data.login;
+  if (data.id) {
+    elCardImg.src = data.avatar_url;
+    elCardBtn.classList.remove("d-none");
+    elCardImg.classList.remove("d-none");
+  } else {
+    elCardBtn.classList.add("d-none");
+    elCardImg.classList.add("d-none");
+  }
+  elCard.classList.remove("d-none");
 };

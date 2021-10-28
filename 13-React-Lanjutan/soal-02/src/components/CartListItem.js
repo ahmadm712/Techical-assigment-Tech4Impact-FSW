@@ -12,7 +12,7 @@ const CartListItem = ({ name, price, amount, increase, decrease }) => {
       </div>
       <div>
         <div className="fw-bold text-center">{amount}</div>
-        <span onClick={decrease} className="btn btn-sm">
+        <span onClick={decrease} className="btn btn-sm btn-danger">
           -
         </span>
         <span onClick={increase} className="btn btn-sm btn-primary">

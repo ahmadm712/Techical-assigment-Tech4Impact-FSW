@@ -24,10 +24,12 @@ export default function App() {
   ];
 
   return (
+    <>
     <FlexContainer>
       {products.map((data) => {
         return <Card data={data} />;
       })}
     </FlexContainer>
+    </>
   );
 }

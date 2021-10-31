@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Latihan 2 Box Model</title>
+    <style>
+        /* p{
+            background-color:lightgray;
+            width: 300px;
+            height: 300px;
+            border: 15px solid black;
+            padding: 50px;
+            margin: 20px;
+        } */
+        div{
+            width: 615px;
+            background: lightblue;
+        }
+        img{
+            width: 150px;
+            background: lightseagreen;
+            padding: 10px;
+            border: 2px solid black;
+            /* margin: 5px; */
+            box-sizing: border-box;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>Contoh Box Model</h1>
+    <p>
+      Tulisan ini adalah konten dari box. Konten sendiri memiliki lebar (width)
+      sebesar 300px dan tinggi (height) sebesar 100px. Pada box, kita
+      menambahkan padding sebesar 50px, border berwarna hitam sebesar 15px, dan
+      margin sebesar 20px.
+    </p>
+    <div>
+        <img src="https://skilvul-assets-01.s3-ap-southeast-1.amazonaws.com/lesson/intro-to-css/cat.jpg" />
+        <img src="https://skilvul-assets-01.s3-ap-southeast-1.amazonaws.com/lesson/intro-to-css/cat.jpg" />
+        <img src="https://skilvul-assets-01.s3-ap-southeast-1.amazonaws.com/lesson/intro-to-css/cat.jpg" />
+        <img src="https://skilvul-assets-01.s3-ap-southeast-1.amazonaws.com/lesson/intro-to-css/cat.jpg"/>
+      </div>
+  </body>
+</html>

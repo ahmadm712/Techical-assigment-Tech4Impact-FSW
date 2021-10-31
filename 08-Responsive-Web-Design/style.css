@@ -1,0 +1,47 @@
+.container img {
+  max-width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  height: 200px;
+  object-fit: cover;
+}
+
+.container {
+  display: flex;
+}
+
+body {
+  background-color: blueviolet;
+
+}
+
+/* for phone */
+@media screen and (min-width: 425px) {
+  body {
+    background-color: red;
+  }
+}
+
+/* For Ipad */
+@media screen and (min-width: 758px) {
+  body {
+    background-color: goldenrod;
+  }
+  .container img {
+    max-width: 80%;
+    height: 300px;
+  }
+  
+}
+
+/* Dekstop */
+@media screen and (min-width: 1024px) {
+  body {
+    background-color: whitesmoke;
+    
+  }
+  .container img {
+    max-width: 85%;
+    height: 400px;
+  }
+}

@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <style>
+      .carousel-item {
+        width: 100%;
+        height: 500px;
+        /* example */
+      }
+
+      .carousel-item img {
+        width: 75%;
+        height: 100%;
+        object-fit: cover;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css"
+    />
+
+    <title>Camp 404</title>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <!-- Logo / Label -->
+        <a class="navbar-brand" href="#">Majalengka404</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <!-- Awal Menu Standart -->
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <!-- Akhir Menu Standart -->
+
+            <!-- Awal DropDown -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Dropdown
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+            <!-- Akhir DropDown -->
+
+            <li class="nav-item">
+              <a class="nav-link disabled">Disabled</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <button
+              class="btn btn-outline-success"
+              type="button"
+              data-bs-toggle="modal"
+              data-bs-target="#modalLogin"
+            >
+              Masuk
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Akhir Navbar -->
+
+    <!-- Header -->
+    <div
+      id="carouselExampleCaptions"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="https://image.freepik.com/free-vector/online-shopping-concept-digital-marketing-website-mobile-application_43880-342.jpg"
+            class="d-block w-100"
+            alt="img 1"
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5 class="text-black">
+              Kapolda Banten Minta Maaf ke Mahasiswa yang Dibanting Polisi Saat
+              Demo di Tangerang
+            </h5>
+            <p>
+              Kapolda Banten, Irjen Rudy Heriyanto menemui MFA beserta
+              orangtuanya, dan meminta maaf secara langsung ke mahasiswa yang
+              dibanting oleh anggota Polresta Tangerang. Mereka bertemu,
+              berbincang dan meminta maaf di Mapolresta Tangerang.
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://image.freepik.com/free-vector/online-shopping-banner-mobile-app-templates-concept-flat-design_1150-34865.jpg"
+            class="d-block w-100"
+            alt="img 2"
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>
+              Mahasiswa Kecam Kekerasan yang Diduga Dilakukan Polisi Saat HUT
+              Tangerang
+            </h5>
+            <p>
+              Himpunan Badan Eksekutif Mahasiswa (BEM) Tangerang Raya mengecam
+              kekerasan yang dilakukan aparat kepolisian saat mengamankan aksi
+              demonstrasi di Kantor Bupati Tangerang. Ketua BEM STIE Putra Nusa
+              Perdana Indonesia, Ahmad Saipul mengatakan, dia menyayangkan dan
+              mengecam perilaku aparat kepolisian yang membanting rekannya saat
+              mengamankan unjuk rasa.
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://images.unsplash.com/photo-1611870683488-d12f28736a61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            class="d-block w-100"
+            alt="img 3"
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>
+              Cerita Peternak Unggas Keluhkan Harga Anjlok hingga Berhadapan
+              dengan Polisi
+            </h5>
+            <p>
+              Sulitnya bertahan hidup dalam kondisi pandemi Covid-19 dirasakan
+              berbagai lapisan masyarakat Indonesia, tidak terkecuali para
+              peternak unggas. Hingga akhirnya mereka nekat demo di Istana
+              Negara, Jakarta. Salah satu peternak unggas, Alvino Antonio
+              menyampaikan, dia bersama Paguyuban Peternak rakyat Nusantara
+              (PPRN) mengaku melakukan aksi damai di depan Istana Negara pada
+              Jumat, 20 Agustus 2021.
+            </p>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!-- Akhir Header -->
+
+    <!--Awal Content -->
+    <div class="container">
+      <div class="row bg-light p-4 text-dark">
+        <div class="text-center fs-2 fw-bold">Produk Kami</div>
+      </div>
+      <div class="row p-5 text-dark text-center">
+        <!-- Awal Card1 -->
+        <div class="card" style="width: 18rem">
+          <img
+            class="card-img-top"
+            src="https://image.freepik.com/free-psd/apparel-with-t-shirt-tote-bag_53876-113707.jpg"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Kaos AV7</h5>
+            <p class="card-text">IDR 150.000.</p>
+            <a href="#" class="btn btn-danger">Buy</a>
+          </div>
+        </div>
+        <!-- Akhir Card1 -->
+
+        <!-- Awal Card2 -->
+
+        <div class="card" style="width: 18rem">
+          <img
+            class="card-img-top"
+            src="https://image.freepik.com/free-psd/apparel-with-t-shirt-tote-bag_53876-113707.jpg"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Kaos AV8</h5>
+            <p class="card-text">IDR 140.000.</p>
+            <a href="#" class="btn btn-danger">Buy</a>
+          </div>
+        </div>
+
+        <!-- Akhir Card2 -->
+
+        <div class="card" style="width: 18rem">
+          <img
+            class="card-img-top"
+            src="https://image.freepik.com/free-psd/apparel-with-t-shirt-tote-bag_53876-113707.jpg"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Kaos AV7</h5>
+            <p class="card-text">IDR 150.000.</p>
+            <a href="#" class="btn btn-danger">Buy</a>
+          </div>
+        </div>
+        <!-- Akhir Card1 -->
+
+        <!-- Awal Card2 -->
+
+        <div class="card" style="width: 18rem">
+          <img
+            class="card-img-top"
+            src="https://image.freepik.com/free-psd/apparel-with-t-shirt-tote-bag_53876-113707.jpg"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Kaos AV8</h5>
+            <p class="card-text">IDR 140.000.</p>
+            <a href="#" class="btn btn-danger">Buy</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="row bg-light p-4 text-dark">
+        <div class="text-center fs-2 fw-bold mb-4">Alamat</div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Outlet</th>
+              <th scope="col">Alamat</th>
+              <th scope="col">Jam</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Jakarta</td>
+              <td>Jl.Baru</td>
+              <td>13.00-22.00</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Bekasi</td>
+              <td>Jl. Lama</td>
+              <td>20.00-22.00</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td colspan="2">Bandung</td>
+              <td>Jl. Menanti</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!-- Akhir Content -->
+   
+    
+
+    <!-- Footer -->
+
+    <div class="row bg-dark p-5 text-white">
+      <div class="text-center">
+        <i class="bi bi-telephone">083120047822</i>
+      </div>
+      <div class="text-center">
+        <i class="bi-envelope">Majalengka404@gmail.com</i>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal" tabindex="-1" id="modalLogin">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Modal title</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label"
+                  >Email address</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                  placeholder="example@gmail.com"
+                />
+                
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label"
+                  >Password</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="exampleInputPassword1"
+                  placeholder="*****"
+
+                />
+              </div>
+              <div class="mb-3 form-check">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="exampleCheck1"
+                />
+                <label class="form-check-label" for="exampleCheck1"
+                  >Remerber Me</label
+                >
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <button type="button" class="btn btn-primary">Login</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

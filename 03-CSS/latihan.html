@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Latihan CSS</title>
+    <style>
+      /* div * {
+        background-color: black;
+      } */
+      #parag2 {
+        color: antiquewhite;
+        font-size: 40px;
+      }
+      .highlight {
+        background-color: black;
+        color: antiquewhite;
+      }
+      /* a[href]{
+        background-color: rgb(34, 12, 161);
+        color: white;
+      } */
+      a[href = "https://www.facebook.com"]
+      {
+        background-color: rgb(202, 23, 23);
+        color: white;
+      }
+      .container p {
+        background-color: hotpink;
+        color: white;
+      }
+      .container > p {
+        background-color: green;
+        color: white;
+      }
+      /* #a1,
+      #a2 {
+        font-size: 40px;
+      } */
+      a:hover{
+          background-color: black;
+          color: antiquewhite;
+      }
+
+      h1:hover{
+        background-color: rgb(194, 23, 23);
+          color: black;
+      }
+
+      p:nth-last-child(1) {
+    background: red;
+    }
+    a::before{
+        content: "Link - ";
+    }
+    a::after{
+        content: " Disini";
+    }
+    p::selection{   
+        background-color: red;
+        color: white;
+    }
+    #descone::first-letter{
+        font-size: 70px;
+        color: aquamarine;
+    }
+    #cont::first-line{
+        color: orangered;
+    }
+    </style>
+  </head>
+  <body>
+    
+    <p id="descone">Nama saya Sarah</p>
+    <p>Saya warga negara Indonesia</p>
+    <p>Saya tinggal di Tangerang</p>
+    <p>
+        Aku senang sekali hari ini karena mendapatkan nilai sempurna pada
+        pelajaran programming.
+      </p>
+      <p id="cont">
+        Aku senang sekali hari ini karena mendapatkan nilai sempurna pada
+        pelajaran programming. Ternyata jerih payahku belajar dari seminggu yang lalu terbayarkan hari ini.
+  
+        Tapi pada saat yang bersamaan aku juga merasa sedih karena teman dekatku sedang sakit. Dia tidak masuk sekolah hari ini. 
+      </p>
+  
+    <div>
+        <p>Kalau mudik ke Jawa Barat</p>
+    <div>
+    <h1 id="parag1">Latihan CSS</h1>
+    <div class="highlight">
+      <p>Nama Saya</p>
+      <p>Ahmad Muji</p>
+    </div>
+    <div class="highlight"></div>
+    <a id="a1">Whatsapp</a>
+    <a href="https://www.facebook.com">Facebook</a>
+    <a href="https://www.quora.com" id="a2">quora</a>
+
+    <div class="container">
+      <p>Selamat datang di web kami</p>
+      <div>
+        <p>Semoga hari mu menyenangkan</p>
+      </div>
+    </div>
+    
+    <h1>Home</h1>
+    <h1>Profil</h1>
+    <h1>Setting</h1>
+    <h1>Berita</h1>
+    <ul>
+        <li><a href="#">Download Part 1</a></li>
+        <li><a href="#">Download Part 2</a></li>
+        <li><a href="#">Download Part3</a></li>
+    </ul>
+    
+  </body>
+</html>

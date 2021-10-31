@@ -15,19 +15,23 @@ export const CardContainer = styled.div`
 
 export const CardImage = styled.img`
   width: 100%;
-  height: 400px;
+  height: 500px;
+  object-fit: cover;
   border-top-left-radius: 0.5em;
   border-top-right-radius: 0.5em;
 `;
 
 export const CardBody = styled.div`
   padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 export const CardPrice = styled.h5`
   font-family: sans-serif;
   font-size: 1.25em;
-  font-weight: 600;
+  font-weight: 800;
   margin: 0;
   margin-bottom: 0.5em;
 `;
@@ -37,6 +41,6 @@ export const CardProductName = styled.h6`
   font-size: 1.25em;
   font-weight: 600;
   margin: 0;
-  margin-bottom: 0.5em;
+  margin-bottom: 1em;
   color: gray;
 `;

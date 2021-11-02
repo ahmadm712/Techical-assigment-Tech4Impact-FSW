@@ -1,3 +1,4 @@
+import { useLocation } from "react-router";
 import MovieCard from "../components/MovieCard";
 import MovieListFilter from "../components/MovieListFilter";
 
@@ -8,18 +9,43 @@ const MovieList = () => {
   const categories = ["TV", "Movie"];
   const fields = ["title", "score"];
 
-  // Variable yang akan menampung parameter yang telah diberikan oleh user
-  const params = {};
+  let queryParams = useLocation().search.slice(1);
+  const QS = require("qs");
+  const params = QS.parse(queryParams);
 
-  // Variable yang kita gunakan untuk melakukan penyaringan data
   const filter = {
-    show: shows[0],
-    category: categories[0],
-    sort: fields[0],
+    show: Number(params.show) || shows[0],
+    category: params.category || categories[0],
+    sort: params.sort || fields[0],
+  };
+
+  const Sorted = (key) => {
+    return (val1, val2) => {
+      if (!val1.hasOwnProperty(key) || !val2.hasOwnProperty(key)) {
+        return 0;
+      }
+
+      const data1 =
+        typeof val1[key] === "string" ? val1[key].toUpperCase() : val1[key];
+      const data2 =
+        typeof val2[key] === "string" ? val2[key].toUpperCase() : val2[key];
+
+      let comp = 0;
+      if (data1 > data2) {
+        comp = 1;
+      } else if (data1 < data2) {
+        comp = -1;
+      }
+
+      return comp;
+    };
   };
 
   // Variable yang akan menyimpan data-data yang sudah difilter menggunakan variable filter diatas
-  const filteredMovies = movies;
+  const filteredMovies = movies
+    .filter((movie) => movie.type === filter.category)
+    .sort(Sorted(filter.sort))
+    .slice(0, filter.show);
 
   return (
     <div className="row">

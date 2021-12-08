@@ -8,16 +8,16 @@
 2. Mohon jelaskan arsitektur dari Node.js?
    Node.js memiliki dua komponen utama, yaitu engine JavaScript V8 Google dan Libuv Library. Selain itu, platform tersebut menggunakan dua design pattern: object pool dan facade. Berikut adalah penjelasan singkat atas masing-masing komponen.
 
-1) Engine V8
+   1) Engine V8
    Engine V8 milik Google adalah sebuah compiler JavaScript yang dibuat menggunakan bahasa pemrograman C++. Dengan komponen ini, input berupa kode JavaScript dapat di-compile menjadi kode dalam tingkat assembly. V8 sendiri terdiri dari tiga komponen:
    1.1 Compiler — mengubah JavaScript menjadi bahasa pemrograman lain
    1.2 Optimizer — menciptakan sebuah abstract syntax tree yang akan diubah menjadi static single assignment dan dioptimasi
    1.3 Garbage collector — V8 membagi penyimpanan yang ada menjadi dua, yaitu penyimpanan lama dan baru. Keduanya menyimpan objek JavaScript, tetapi penyimpanan baru juga merupakan tempat menaruh output dari compiler. Ketika penyimpanan baru sudah penuh, garbage collector memindahkan objek-objek lama ke penyimpanan lama agar kinerja Node.js tetap ringan.
 
-2) Libuv library
+   2) Libuv library
    Library C++ ini bertugas mengelola operasi asynchronous I/O (input/output) di Node.js dan main event loop. Di dalamnya juga terdapat thread pool reserve yang menangani thread setiap operasi I/O.
 
-3) Design pattern
+   3) Design pattern
    Ada dua jenis design pattern yang digunakan oleh Node.js, yaitu object pool dan facade. Berikut penjelasannya:
    3.1 Object pool — design pattern berisi kumpulan objek yang dapat digunakan untuk task tertentu
    3.2 Facade — design pattern yang memberikan tampilan antarmuka untuk body kode

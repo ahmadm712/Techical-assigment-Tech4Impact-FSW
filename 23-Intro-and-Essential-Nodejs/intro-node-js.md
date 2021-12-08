@@ -43,18 +43,16 @@
            ```js
            // method declaration
 
-      exports.tambah = function(a, b){
-      return a + b;
-      }
+            exports.tambah = function(a, b){
+            return a + b;
+            }
 
-      // method declaration
-      exports.kali = function (a, b) {
-      return a \* b;
-      }
+            // method declaration
+            exports.kali = function (a, b) {
+            return a \* b;
+            }
 
-      // property declaration
-      exports.title = 'Belajar Penjumlahan dan Perkalian';
+            // property declaration
+            exports.title = 'Belajar Penjumlahan dan Perkalian';
 
-      ```
-
-      ```
+            ```

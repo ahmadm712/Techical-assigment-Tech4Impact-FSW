@@ -39,20 +39,19 @@
     - Contoh built-in module seperti: http, fs, os , process
     - Contoh external module seperti: mongodb, express, mongoose, sequelize
     - Contoh custom module seperti:
-
-           ```js
-           // method declaration
-
+    
+      ```javascript
+      // method declaration
             exports.tambah = function(a, b){
             return a + b;
             }
 
             // method declaration
             exports.kali = function (a, b) {
-            return a \* b;
+            return a * b;
             }
 
             // property declaration
             exports.title = 'Belajar Penjumlahan dan Perkalian';
+      ```
 
-            ```

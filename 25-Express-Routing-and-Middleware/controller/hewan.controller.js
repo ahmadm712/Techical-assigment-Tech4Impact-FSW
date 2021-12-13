@@ -40,21 +40,21 @@ exports.getHewanByID = (req, res) => {
 };
 
 exports.createNewHewan = (req, res) => {
-  const body = req.body;
-  const idNew = hewan[hewan.length - 1].id + 1;
-
+  const body = req.body
+  const idBaru = hewan[hewan.length - 1].id + 1
+  
   const hewanBaru = {
-    id: idNew,
+    id: idBaru,
     nama: body.nama,
-    spesies: body.spesies,
-  };
+    spesies: body.spesies
+  }
 
-  hewan.push(hewanBaru);
+  hewan.push(hewanBaru)
   res.status(201).json({
     msg: "success adding one pet",
-    hewan: hewan,
-  });
-};
+    hewan: hewan
+  })
+}
 
 exports.updateHewan = (req, res) => {
   const idHewan = req.params.id;

@@ -5,17 +5,13 @@ const HewanController = require("../controller/hewan.controller");
 
 const postChecker = (req, res, next) => {
   const validSpesies = ["kucing", "anjing", "kelinci"];
-  const spesies = req.body.spesies
+  const spesies = req.body.spesies;
 
-
-
-  (validSpesies.includes(spesies)) ? next() : res.status(400).json({ error: "Spesies not valid" });
-
-//   if (validSpesies.includes(spesies)) {
-//     next();
-//   } else {
-//     res.status(400).json({ error: "Spesies not valid" });
-//   }
+  if (validSpesies.includes(spesies)) {
+    next();
+  } else {
+    res.status(400).json({ error: "Spesies not valid" });
+  }
 };
 
 router.get("/", HewanController.getAllHewan);

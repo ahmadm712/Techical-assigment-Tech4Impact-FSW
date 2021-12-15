@@ -1,7 +1,7 @@
 ## Deploy Back End App
 
 ## Link
-![Link](https://crud-mongodb-29.herokuapp.com/artis)
+[Link](https://crud-mongodb-29.herokuapp.com/artis)
 
 1. Tampilan
   - /Artis

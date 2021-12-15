@@ -1,0 +1,15 @@
+URL =  https://crud-mongodb-29.herokuapp.com/artis
+
+EndPoint
+
+"artis/" : Get Data
+"artis/" : Post Data
+
+"artis/:id" : Get Data By id
+"artis/:id" : Update Data by id
+"artis/:id" : Delete Data by id
+
+"artis/songs/:songs" : Get Data By songs
+"artis/search" : Get Data by Parameter
+"artis/genre/:genre" : Delete Data By genre
+

@@ -105,6 +105,7 @@
         "_id": "ObjectId('7a89d7asd')",
         "title": "Lions King"
     }]
-    }]
+    }
     ]
+
 ```

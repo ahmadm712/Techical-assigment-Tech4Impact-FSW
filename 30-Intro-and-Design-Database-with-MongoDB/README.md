@@ -33,8 +33,8 @@
     },
     {
       "_id": "ObjectId('qw65e44qd564a')",
-      "street": "Jl jojo2",
-      "street": "Jl Loremsad 2"
+      "street_1": "Jl jojo2",
+      "street_2": "Jl Loremsad 2"
     }
   ]
 }

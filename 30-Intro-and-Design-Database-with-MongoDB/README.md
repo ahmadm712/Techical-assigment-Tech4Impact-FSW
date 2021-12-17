@@ -10,7 +10,7 @@
   "_id": "ObjectId('124324ARADF')",
   "fullname": "Ahmmad",
   "email": "ahmad@mail.com",
-  "phone": 0844445555111
+  "phone": "0844445555111"
 }
 ```
 
@@ -24,7 +24,7 @@
 {
   "_id": "ObjectId('12314ASDAD')",
   "fullname": "Jasuk",
-  "phone": 0845646545,
+  "phone": "0845646545",
   "address": [
     {
       "_id": "ObjectId('12314ASDAD')",

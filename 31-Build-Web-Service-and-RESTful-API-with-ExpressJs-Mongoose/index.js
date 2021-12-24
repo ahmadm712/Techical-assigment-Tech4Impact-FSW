@@ -27,7 +27,16 @@ app.use(router)
 
 // API Participant Endpoints
 
+app
+.route('/participants')
+.get(Participants.listAllParticipant)
+.post(Participants.createNewParticipant);
 
+app
+.route('/participants/:participantid')
+.get(Participants.readParticipant)
+.put(Participants.updateParticipant)
+.delete(Participants.deleteParticipant);
 // Console the app is listening success message with port present
 app.listen(port, () => {
   console.log(`Server running at ${port}`);

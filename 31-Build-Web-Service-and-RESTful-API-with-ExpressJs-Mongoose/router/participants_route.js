@@ -1,17 +1,17 @@
-const express = require("express");
+// const express = require("express");
 
-const Participants = require("../controllers/Participants");
+// const Participants = require("../controllers/Participants");
 
-const router = express.Router();
+// const router = express.Router();
 
-router.get("/", Participants.listAllParticipant);
-router.post("/", Participants.createNewParticipant);
+// router.get("/", Participants.listAllParticipant);
+// router.post("/", Participants.createNewParticipant);
 
-router.get("/:participantid", Participants.readParticipant);
-router.put("/:participantid", Participants.updateParticipant);
-router.delete("/:participantid", Participants.deleteparticipant);
+// router.get("/:participantid", Participants.readParticipant);
+// router.put("/:participantid", Participants.updateParticipant);
+// router.delete("/:participantid", Participants.deleteparticipant);
 
-module.exports = router
+// module.exports = router
 
 // app
 // .route('/participants')

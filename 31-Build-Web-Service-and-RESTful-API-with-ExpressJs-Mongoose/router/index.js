@@ -3,9 +3,8 @@ const express = require("express");
 const coursesRoute = require("./courses_route");
 const instructorsRoute = require("./instructors_route");
 const participantsRoute = require("./participants_route");
-// const  = require("./participants_route");
-// const course
-// const participant
+const Participants = require("../controllers/Participants");
+
 
 const router = express.Router();
 
@@ -19,6 +18,5 @@ router.get("/", (req, res) => {
 
 router.use("/instructors", instructorsRoute);
 router.use("/courses", coursesRoute);
-// router.use("/participants", participantsRoute);
 
 module.exports = router;
